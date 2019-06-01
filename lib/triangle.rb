@@ -19,7 +19,12 @@ class Triangle
     end
     
     def validate_triangle
-      
+      legit_triangle = [(length_a + length_b > length_c),
+      (length_a + length_b > length_c)]
+    end
+    
+    class TriangleError < StandardError
+      # triangle error code
     end
     
 end
