@@ -1,16 +1,21 @@
 class Triangle
-  attr_accessor :length, :equilateral, :isoceles, :scalene
+    attr_accessor :length_a, :length_b, :length_c
   
-  def initialize(length, length, length)
-    @length = length 
-    @equilateral = equilateral
-    @isoceles = isoceles
-    @scalene = scalene
-  end 
+    def initialize(length_a, length_b, length_c)
+      @length_a = length_a 
+      @length_b = length_b
+      @length_c = length_c  
+    end 
   
-  def kind(triangle) 
-    self.equilateral = triangle
-    if triangle(2, 4, 2)
-  end 
-  # write code here
+    def kind
+      if length_a == length_b && length_b == length_c
+          :equilateral
+      elsif length_a == length_b || length_b == length_c || length_a == length_c
+          :isosceles
+      else
+          :scalene
+      end 
+    end
+    
+    
 end
